@@ -5,8 +5,8 @@
     <!-- Header -->
     <div class="flex items-center justify-between mb-8">
         <div>
-            <h1 class="text-3xl font-bold text-[#5C6B65]">Tambah Siswa</h1>
-            <p class="text-[#819A91] mt-1">Isi data di bawah untuk mendaftarkan siswa baru</p>
+            <h1 class="text-3xl font-bold text-[#5C6B65]">Tambah Mahasiswa</h1>
+            <p class="text-[#819A91] mt-1">Isi data di bawah untuk mendaftarkan mahasiswa baru</p>
         </div>
         <a href="{{ route('admin.siswa.index') }}" class="px-5 py-2.5 bg-white text-[#819A91] rounded-xl shadow-sm hover:shadow-md transition-all flex items-center gap-2 font-medium">
             <i data-lucide="arrow-left" class="w-4 h-4"></i> Kembali
@@ -28,7 +28,7 @@
                     <label class="block text-sm font-semibold text-[#5C6B65] mb-2">Nama Lengkap</label>
                     <div class="relative">
                         <i data-lucide="user" class="absolute left-4 top-1/2 -translate-y-1/2 text-[#819A91] w-5 h-5"></i>
-                        <input type="text" name="nama" id="nama" required placeholder="Masukkan nama siswa"
+                        <input type="text" name="nama" id="nama" required placeholder="Masukkan nama mahasiswa"
                             class="w-full pl-12 pr-4 py-4 bg-[#EEEFE0]/50 border-2 border-transparent rounded-2xl focus:bg-white focus:border-[#A7C1A8] outline-none transition-all duration-300"
                             onfocus="updateProgress(20)">
                         <span class="text-red-500 text-xs mt-1 hidden" id="error-nama"></span>
@@ -36,9 +36,9 @@
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-6">
-                    <!-- NISN -->
+                    <!-- NIM -->
                     <div>
-                        <label class="block text-sm font-semibold text-[#5C6B65] mb-2">NISN</label>
+                        <label class="block text-sm font-semibold text-[#5C6B65] mb-2">NIM</label>
                         <div class="relative">
                             <i data-lucide="id-card" class="absolute left-4 top-1/2 -translate-y-1/2 text-[#819A91] w-5 h-5"></i>
                             <input type="text" name="nisn" id="nisn" required maxlength="10" placeholder="0098765432"
@@ -66,7 +66,7 @@
                     <label class="block text-sm font-semibold text-[#5C6B65] mb-2">Email</label>
                     <div class="relative">
                         <i data-lucide="mail" class="absolute left-4 top-1/2 -translate-y-1/2 text-[#819A91] w-5 h-5"></i>
-                        <input type="email" name="email" id="email" required placeholder="siswa@email.com"
+                        <input type="email" name="email" id="email" required placeholder="mahasiswa@email.com"
                             class="w-full pl-12 pr-4 py-4 bg-[#EEEFE0]/50 border-2 border-transparent rounded-2xl focus:bg-white focus:border-[#A7C1A8] outline-none transition-all duration-300"
                             onfocus="updateProgress(80)">
                         <span class="text-red-500 text-xs mt-1 hidden" id="error-email"></span>
@@ -88,7 +88,7 @@
                     <span class="text-red-500 text-xs mt-1 hidden" id="error-kata_sandi"></span>
                     <p class="text-xs text-gray-500 mt-2">
                         <i data-lucide="info" class="w-3 h-3 inline"></i>
-                        Siswa akan login menggunakan <strong>NISN</strong> dan <strong>password ini</strong>
+                        Mahasiswa akan login menggunakan <strong>NIM</strong> dan <strong>password ini</strong>
                     </p>
                 </div>
 
@@ -112,7 +112,7 @@
         </div>
         <div>
             <h4 id="toastTitle" class="font-bold text-[#5C6B65]">Berhasil!</h4>
-            <p id="toastMessage" class="text-sm text-[#819A91]">Data siswa telah disimpan</p>
+            <p id="toastMessage" class="text-sm text-[#819A91]">Data mahasiswa telah disimpan</p>
         </div>
     </div>
 </div>
@@ -208,14 +208,14 @@
             lucide.createIcons();
 
             if (data.success) {
-                showToast(`Data siswa ${data.data.nama} berhasil ditambahkan! NISN: ${data.data.nisn}`, 'success');
+                showToast(`Data mahasiswa ${data.data.nama} berhasil ditambahkan! NIM: ${data.data.nisn}`, 'success');
 
                 // Redirect ke halaman data siswa setelah 1.5 detik
                 setTimeout(() => {
                     window.location.href = '{{ route("admin.siswa.index") }}';
                 }, 1500);
             } else {
-                showToast(data.message || 'Gagal menyimpan data siswa', 'error');
+                showToast(data.message || 'Gagal menyimpan data mahasiswa', 'error');
             }
         })
         .catch(error => {

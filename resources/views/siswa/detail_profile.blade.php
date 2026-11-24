@@ -20,11 +20,11 @@
         <!-- Header Section -->
         <div class="mb-6 animate-fade-in">
             @if (isset($isAdmin) && $isAdmin)
-                <h1 class="text-3xl font-bold text-gray-800 mb-2">Edit Data Siswa</h1>
-                <p class="text-gray-600">Kelola informasi data siswa ({{ $siswa->nama }})</p>
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">Edit Data Mahasiswa</h1>
+                <p class="text-gray-600">Kelola informasi data mahasiswa ({{ $siswa->nama }})</p>
             @else
-                <h1 class="text-3xl font-bold text-gray-800 mb-2">Detail Profil Siswa</h1>
-                <p class="text-gray-600">Kelola informasi pribadi siswa</p>
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">Detail Profil Mahasiswa</h1>
+                <p class="text-gray-600">Kelola informasi pribadi mahasiswa</p>
             @endif
         </div>
 
@@ -49,7 +49,7 @@
                         </div>
 
                         <h2 class="text-xl font-bold text-gray-800 mb-1" id="displayNama">{{ $siswa->nama }}</h2>
-                        <p class="text-[#819A91] font-medium mb-3" id="displayNisn">NISN: {{ $siswa->nisn }}</p>
+                        <p class="text-[#819A91] font-medium mb-3" id="displayNisn">NIM: {{ $siswa->nisn }}</p>
 
                         <div
                             class="flex items-center space-x-2 bg-[#EEEFE0] px-4 py-2 rounded-full border border-[#D1D8BE]">
@@ -91,9 +91,8 @@
                     <div class="flex items-center justify-between mb-6">
                         <div>
                             <h3 class="text-xl font-bold text-gray-800">Informasi Detail</h3>
-                            <p class="text-sm text-gray-600 mt-1">Data lengkap profil siswa sesuai database</p>
+                            <p class="text-sm text-gray-600 mt-1">Data lengkap profil mahasiswa sesuai database</p>
                         </div>
-                        <button onclick="toggleEdit()" id="editBtn"
                             class="px-6 py-2.5 bg-[#819A91] text-white rounded-xl font-medium hover:bg-[#6b8279] transition-all shadow-lg hover:shadow-xl flex items-center space-x-2 transform hover:-translate-y-0.5">
                             <i class="fas fa-edit"></i>
                             <span>Edit Profil</span>
@@ -127,11 +126,11 @@
                                     class="w-full px-4 py-3 rounded-xl bg-gray-100 border border-gray-200 text-gray-800 font-medium transition-all disabled:cursor-not-allowed">
                             </div>
 
-                            <!-- NISN -->
+                            <!-- NIM -->
                             <div class="space-y-2">
                                 <label class="text-sm font-semibold text-gray-700 flex items-center">
                                     <i class="fas fa-id-card text-[#819A91] mr-2 w-4"></i>
-                                    NISN
+                                    NIM
                                 </label>
                                 <input type="text" id="inputNisn" name="nisn" value="{{ $siswa->nisn }}"
                                     @if (!isset($isAdmin) || !$isAdmin) disabled @endif
@@ -543,7 +542,7 @@
                                             if (isAdmin && document.getElementById('displayNama')) {
                                                 document.getElementById('displayNama').textContent = document
                                                     .getElementById('inputNama').value;
-                                                document.getElementById('displayNisn').textContent = 'NISN: ' +
+                                                document.getElementById('displayNisn').textContent = 'NIM: ' +
                                                     document.getElementById('inputNisn').value;
 
                                                 // Update profile image

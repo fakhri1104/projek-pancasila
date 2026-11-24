@@ -272,7 +272,7 @@
                 <a href="{{ route('admin.siswa.index') }}"
                     class="nav-link px-3 py-3 rounded-xl gap-3 {{ request()->routeIs('admin.siswa.*') ? 'bg-[#819A91] text-white' : 'text-white hover:bg-[#D1D8BE]/30' }}">
                     <i data-lucide="users" class="w-5 h-5 flex-shrink-0"></i>
-                    <span class="font-medium sidebar-text">Data Siswa</span>
+                    <span class="font-medium sidebar-text">Data Mahasiswa</span>
                 </a>
 
                 <a href="{{ route('admin.aspirasi.index') }}"
@@ -299,7 +299,7 @@
                         class="profile-image" alt="Profile">
                     <div class="profile-info sidebar-text">
                         <p class="font-medium text-sm text-white truncate">{{ $user->name ?? ($user->nama ?? 'User') }}</p>
-                        <p class="text-xs text-[#D1D8BE] truncate capitalize">{{ $role }}</p>
+                        <p class="text-xs text-[#D1D8BE] truncate">{{ $role === 'siswa' ? 'Mahasiswa' : 'Administrator' }}</p>
                     </div>
                 </a>
             @else
@@ -308,7 +308,7 @@
                         class="profile-image" alt="Profile">
                     <div class="profile-info sidebar-text">
                         <p class="font-medium text-sm text-white truncate">{{ $user->name ?? ($user->nama ?? 'User') }}</p>
-                        <p class="text-xs text-[#D1D8BE] truncate capitalize">{{ $role }}</p>
+                        <p class="text-xs text-[#D1D8BE] truncate">{{ $role === 'siswa' ? 'Mahasiswa' : 'Administrator' }}</p>
                     </div>
                 </div>
             @endif

@@ -1,6 +1,6 @@
 @extends('layouts.auth_layout')
 
-@section('title', 'Login Aspirasi Siswa')
+@section('title', 'Login Aspirasi Mahasiswa')
 
 @section('content')
 
@@ -43,11 +43,11 @@
 
                     <!-- Content -->
                     <h2 class="text-lg font-bold text-[#D1D8BE]/70 mb-1 tracking-wider uppercase">
-                        Aspirasi<span class="text-[#D1D8BE]">Siswa</span>
+                        Aspirasi<span class="text-[#D1D8BE]">Mahasiswa</span>
                     </h2>
 
                     <h1 class="text-4xl font-extrabold text-[#EEEFE0] mb-4 leading-[1.1]">
-                        Suara Siswa,<br>
+                        Suara Mahasiswa,<br>
                         <span class="text-[#D1D8BE]">Aspirasi Nyata</span>
                     </h1>
 
@@ -70,7 +70,7 @@
                 <div class="flex p-1 bg-[#D1D8BE]/50 rounded-2xl mb-8 w-full max-w-md mx-auto">
                     <button onclick="switchTab('siswa')" id="tab-siswa"
                         class="flex-1 py-3 px-6 rounded-xl text-sm font-semibold bg-[#819A91] text-[#EEEFE0]">
-                        Siswa
+                        Mahasiswa
                     </button>
 
                     <button onclick="switchTab('admin')" id="tab-admin"
@@ -84,9 +84,9 @@
                     {{-- FORM SISWA --}}
                     <div id="form-siswa">
 
-                        <h3 class="text-2xl font-bold text-[#819A91] mb-0">Login Siswa</h3>
+                        <h3 class="text-2xl font-bold text-[#819A91] mb-0">Login Mahasiswa</h3>
                         <p class="text-sm font-light text-[#819A91] mb-6">
-                            Masukkan NISN dan Password untuk mengirim aspirasi
+                            Masukkan NIM dan Password untuk mengirim aspirasi
                         </p>
 
                         {{-- Error Alert --}}
@@ -105,7 +105,7 @@
                         <form method="POST" action="/login-siswa" class="space-y-5">
                             @csrf
 
-                            <input type="text" placeholder="NISN" name="nisn"
+                            <input type="text" placeholder="NIM" name="nisn"
                                 class="w-full px-5 py-4 bg-[#D1D8BE]/30 border-2 border-[#D1D8BE] rounded-xl focus:border-[#819A91] focus:outline-none transition-colors"
                                 value="{{ old('nisn') }}">
 
@@ -113,7 +113,7 @@
                                 class="w-full px-5 py-4 bg-[#D1D8BE]/30 border-2 border-[#D1D8BE] rounded-xl focus:border-[#819A91] focus:outline-none transition-colors">
 
                             <button class="w-full py-4 bg-[#819A91] text-[#EEEFE0] font-bold rounded-xl hover:bg-[#6b8279] transition-colors">
-                                Masuk sebagai Siswa
+                                Masuk sebagai Mahasiswa
                             </button>
 
                         </form>

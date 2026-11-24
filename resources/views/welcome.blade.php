@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SpeakUp — Sistem Aspirasi Siswa</title>
+    <title>SpeakUp — Sistem Aspirasi Mahasiswa</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap"
@@ -227,14 +227,14 @@
         <!-- LEFT: Hero -->
         <div class="flex-1 flex flex-col justify-center" style="max-width:520px;">
             <div class="au au-2 mb-4">
-                <span class="badge">Sistem Aspirasi Siswa Digital</span>
+                <span class="badge">Sistem Aspirasi Mahasiswa Digital</span>
             </div>
             <h1 class="serif au au-2"
                 style="font-size:clamp(2rem,3.5vw,3rem);line-height:1.15;color:#1e2e28;margin-bottom:14px;">
                 Suaramu <em>penting.</em><br />Kami siap mendengar.
             </h1>
             <p class="au au-3" style="font-size:15px;line-height:1.7;color:#4a6059;max-width:420px;margin-bottom:24px;">
-                SpeakUp adalah platform aspirasi siswa yang memudahkan kamu menyampaikan saran, keluhan, dan ide kepada
+                SpeakUp adalah platform aspirasi mahasiswa yang memudahkan kamu menyampaikan saran, keluhan, dan ide kepada
                 pihak sekolah — secara transparan, aman, dan terstruktur.
             </p>
 
@@ -346,8 +346,8 @@
                         <div
                             style="background:rgba(167,193,168,0.25);border:1px solid rgba(167,193,168,0.5);border-radius:16px;padding:16px 18px;max-width:180px;">
                             <p style="font-size:12.5px;color:#4a6059;line-height:1.65;font-style:italic;">"Akhirnya ada
-                                tempat yang beneran dengerin suara siswa."</p>
-                            <p class="font-semibold mt-2" style="font-size:11px;color:var(--c1);">— Siswa Kelas XI RPL
+                                tempat yang beneran dengerin suara mahasiswa."</p>
+                            <p class="font-semibold mt-2" style="font-size:11px;color:var(--c1);">— Mahasiswa
                             </p>
                         </div>
                     </div>
@@ -360,7 +360,7 @@
     <!-- FOOTER -->
     <footer class="relative z-10 flex items-center justify-between px-10 py-4"
         style="border-top:1px solid rgba(129,154,145,0.15);">
-        <p style="font-size:12px;color:#9aafa9;">UKK SMK Kelas 12 — Rekayasa Perangkat Lunak</p>
+        <p style="font-size:12px;color:#9aafa9;">Mata Kuliah Pancasila</p>
         <p style="font-size:12px;color:#9aafa9;">© 2025 SpeakUp. All rights reserved.</p>
     </footer>
 

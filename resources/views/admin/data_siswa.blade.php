@@ -5,12 +5,12 @@
         <!-- Header -->
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
             <div>
-                <h1 class="text-3xl font-bold text-[#5C6B65]">Data Siswa</h1>
-                <p class="text-[#819A91] mt-1">Kelola data siswa aktif</p>
+                <h1 class="text-3xl font-bold text-[#5C6B65]">Data Mahasiswa</h1>
+                <p class="text-[#819A91] mt-1">Kelola data mahasiswa aktif</p>
             </div>
             <a href="{{ route('admin.siswa.create') }}"
                 class="px-6 py-3 bg-gradient-to-r from-[#819A91] to-[#A7C1A8] text-white rounded-2xl shadow-lg shadow-[#819A91]/30 hover:shadow-xl hover:shadow-[#819A91]/40 transform hover:-translate-y-0.5 transition-all flex items-center gap-2 font-semibold">
-                <i data-lucide="plus" class="w-5 h-5"></i> Tambah Siswa
+                <i data-lucide="plus" class="w-5 h-5"></i> Tambah Mahasiswa
             </a>
         </div>
 
@@ -67,7 +67,7 @@
             class="bg-white/80 backdrop-blur-lg rounded-2xl p-4 shadow-sm border border-white/50 mb-6 flex flex-col md:flex-row gap-4">
             <div class="relative flex-1">
                 <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 text-[#819A91] w-5 h-5"></i>
-                <input type="text" placeholder="Cari nama, NISN, atau email..."
+                <input type="text" placeholder="Cari nama, NIM, atau email..."
                     class="w-full pl-12 pr-4 py-3 bg-white/50 border border-[#D1D8BE] rounded-xl focus:outline-none focus:border-[#819A91] focus:bg-white transition-all"
                     oninput="filterTable(this.value)">
             </div>
@@ -91,9 +91,9 @@
                 <table class="w-full">
                     <thead>
                         <tr class="bg-[#819A91]/10 border-b border-[#D1D8BE]">
-                            <th class="px-6 py-4 text-left text-xs font-bold text-[#5C6B65] uppercase tracking-wider">Siswa
+                            <th class="px-6 py-4 text-left text-xs font-bold text-[#5C6B65] uppercase tracking-wider">Mahasiswa
                             </th>
-                            <th class="px-6 py-4 text-left text-xs font-bold text-[#5C6B65] uppercase tracking-wider">NISN
+                            <th class="px-6 py-4 text-left text-xs font-bold text-[#5C6B65] uppercase tracking-wider">NIM
                             </th>
                             <th class="px-6 py-4 text-left text-xs font-bold text-[#5C6B65] uppercase tracking-wider">Kelas
                             </th>
@@ -164,7 +164,7 @@
                                             class="w-16 h-16 bg-[#D1D8BE]/30 rounded-full flex items-center justify-center mb-4">
                                             <i data-lucide="users" class="w-8 h-8 text-[#819A91]"></i>
                                         </div>
-                                        <p class="text-[#5C6B65] font-semibold mb-1">Belum Ada Data Siswa</p>
+                                        <p class="text-[#5C6B65] font-semibold mb-1">Belum Ada Data Mahasiswa</p>
                                         <p class="text-[#819A91] text-sm mb-4">Klik tombol Tambah Siswa untuk menambahkan
                                             data siswa baru</p>
                                         <a href="{{ route('admin.siswa.create') }}"
@@ -183,7 +183,7 @@
             <div class="px-6 py-4 border-t border-[#EEEFE0] flex flex-col sm:flex-row items-center justify-between gap-4">
                 <p class="text-sm text-[#819A91]">
                     Menampilkan {{ $siswas->firstItem() ?? 0 }} - {{ $siswas->lastItem() ?? 0 }} dari
-                    {{ $siswas->total() }} data siswa
+                    {{ $siswas->total() }} data mahasiswa
                 </p>
                 @if ($siswas->hasPages())
                     <div class="flex items-center gap-2">
@@ -239,8 +239,8 @@
             <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i data-lucide="alert-triangle" class="w-8 h-8 text-red-500"></i>
             </div>
-            <h3 class="text-xl font-bold text-[#5C6B65] mb-2">Hapus Data Siswa?</h3>
-            <p class="text-[#819A91] text-sm mb-2">Data siswa <strong id="siswaName"></strong> akan dihapus permanen.</p>
+            <h3 class="text-xl font-bold text-[#5C6B65] mb-2">Hapus Data Mahasiswa?</h3>
+            <p class="text-[#819A91] text-sm mb-2">Data mahasiswa <strong id="siswaName"></strong> akan dihapus permanen.</p>
             <p class="text-[#819A91] text-sm mb-6">Tindakan ini tidak dapat dibatalkan. Lanjutkan?</p>
             <div class="flex gap-3">
                 <button onclick="closeDeleteModal()"
@@ -265,7 +265,7 @@
             </div>
             <div>
                 <h4 id="toastTitle" class="font-bold text-[#5C6B65]">Terhapus!</h4>
-                <p id="toastMessage" class="text-sm text-[#819A91]">Data siswa telah dihapus</p>
+                <p id="toastMessage" class="text-sm text-[#819A91]">Data mahasiswa telah dihapus</p>
             </div>
         </div>
     </div>
@@ -360,7 +360,7 @@
                             }, 300);
                         }
                     } else {
-                        showToast(data.message || 'Gagal menghapus data siswa', 'error');
+                        showToast(data.message || 'Gagal menghapus data mahasiswa', 'error');
                     }
                 })
                 .catch(error => {

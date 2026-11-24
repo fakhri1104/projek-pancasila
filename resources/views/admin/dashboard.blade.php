@@ -502,7 +502,7 @@
                         id="umpanBalikText"
                         class="w-full p-3 border border-[#D1D8BE] rounded-lg focus:outline-none focus:border-[#819A91] resize-none"
                         rows="3"
-                        placeholder="Tulis umpan balik untuk siswa..."
+                        placeholder="Tulis umpan balik untuk mahasiswa..."
                     ></textarea>
                 </div>
 

@@ -8,7 +8,7 @@
             class="bg-white/50 backdrop-blur-lg border-b border-[#819A91]/15 px-8 py-5 flex items-center justify-between">
             <div>
                 <h1 class="font-['DM_Serif_Display'] text-2xl font-bold text-[#1e2e28]">Daftar Aspirasi</h1>
-                <p class="text-xs text-[#7a9488] mt-0.5">Kelola dan tanggapi aspirasi dari siswa</p>
+                <p class="text-xs text-[#7a9488] mt-0.5">Kelola dan tanggapi aspirasi dari mahasiswa</p>
             </div>
 
             <div class="flex items-center gap-4">
@@ -528,7 +528,7 @@
                         id="umpanBalikText"
                         class="w-full p-3 border border-[#D1D8BE] rounded-xl focus:outline-none focus:border-[#819A91] resize-none text-sm"
                         rows="3"
-                        placeholder="Tulis umpan balik untuk siswa..."></textarea>
+                        placeholder="Tulis umpan balik untuk mahasiswa..."></textarea>
                 </div>
 
                 <div>

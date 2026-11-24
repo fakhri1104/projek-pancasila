@@ -5,14 +5,14 @@
     <!-- Back Button -->
     <div class="mb-6">
         <a href="{{ route('admin.siswa.index') }}" class="inline-flex items-center gap-2 px-4 py-2 bg-white text-[#819A91] rounded-xl shadow-sm hover:shadow-md transition-all font-medium">
-            <i data-lucide="arrow-left" class="w-4 h-4"></i> Kembali ke Data Siswa
+            <i data-lucide="arrow-left" class="w-4 h-4"></i> Kembali ke Data Mahasiswa
         </a>
     </div>
 
     <!-- Header -->
     <div class="mb-6">
-        <h1 class="text-3xl font-bold text-[#5C6B65]">Edit Data Siswa</h1>
-        <p class="text-[#819A91] mt-1">Perbarui informasi data siswa {{ $siswa->nama }}</p>
+        <h1 class="text-3xl font-bold text-[#5C6B65]">Edit Data Mahasiswa</h1>
+        <p class="text-[#819A91] mt-1">Perbarui informasi data mahasiswa {{ $siswa->nama }}</p>
     </div>
 
     <!-- Form Edit -->
@@ -29,19 +29,19 @@
                 </label>
                 <input type="text" id="nama" name="nama" value="{{ $siswa->nama }}" required
                     class="w-full px-4 py-3 rounded-xl border border-[#D1D8BE] focus:outline-none focus:border-[#819A91] focus:ring-2 focus:ring-[#819A91]/20 transition-all"
-                    placeholder="Masukkan nama lengkap siswa">
+                    placeholder="Masukkan nama lengkap mahasiswa">
                 <p class="text-xs text-red-500 mt-1 hidden" id="namaError"></p>
             </div>
 
-            <!-- NISN -->
+            <!-- NIM -->
             <div class="mb-6">
                 <label class="block text-sm font-semibold text-[#5C6B65] mb-2">
                     <i data-lucide="credit-card" class="w-4 h-4 inline mr-1"></i>
-                    NISN
+                    NIM
                 </label>
                 <input type="text" id="nisn" name="nisn" value="{{ $siswa->nisn }}" required
                     class="w-full px-4 py-3 rounded-xl border border-[#D1D8BE] focus:outline-none focus:border-[#819A91] focus:ring-2 focus:ring-[#819A91]/20 transition-all"
-                    placeholder="Masukkan NISN (10 digit)">
+                    placeholder="Masukkan NIM (10 digit)">
                 <p class="text-xs text-red-500 mt-1 hidden" id="nisnError"></p>
             </div>
 
@@ -231,7 +231,7 @@
             const data = await response.json();
 
             if (response.ok && data.success) {
-                showToast(data.message || 'Data siswa berhasil diperbarui!', 'success');
+                showToast(data.message || 'Data mahasiswa berhasil diperbarui!', 'success');
 
                 setTimeout(() => {
                     window.location.href = '{{ route("admin.siswa.index") }}';
@@ -308,7 +308,7 @@
     <div class="bg-white/80 backdrop-blur-lg rounded-2xl p-4 shadow-sm border border-white/50 mb-6 flex flex-col md:flex-row gap-4">
         <div class="relative flex-1">
             <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 text-[#819A91] w-5 h-5"></i>
-            <input type="text" placeholder="Cari nama, NISN, atau email..."
+            <input type="text" placeholder="Cari nama, NIM, atau email..."
                 class="w-full pl-12 pr-4 py-3 bg-white/50 border border-[#D1D8BE] rounded-xl focus:outline-none focus:border-[#819A91] focus:bg-white transition-all"
                 oninput="filterTable(this.value)">
         </div>
@@ -334,8 +334,8 @@
             <table class="w-full">
                 <thead>
                     <tr class="bg-[#819A91]/10 border-b border-[#D1D8BE]">
-                        <th class="px-6 py-4 text-left text-xs font-bold text-[#5C6B65] uppercase tracking-wider">Siswa</th>
-                        <th class="px-6 py-4 text-left text-xs font-bold text-[#5C6B65] uppercase tracking-wider">NISN</th>
+                        <th class="px-6 py-4 text-left text-xs font-bold text-[#5C6B65] uppercase tracking-wider">Mahasiswa</th>
+                        <th class="px-6 py-4 text-left text-xs font-bold text-[#5C6B65] uppercase tracking-wider">NIM</th>
                         <th class="px-6 py-4 text-left text-xs font-bold text-[#5C6B65] uppercase tracking-wider">Kelas</th>
                         <th class="px-6 py-4 text-left text-xs font-bold text-[#5C6B65] uppercase tracking-wider">Email</th>
                         <th class="px-6 py-4 text-left text-xs font-bold text-[#5C6B65] uppercase tracking-wider">Aspirasi</th>
@@ -410,7 +410,7 @@
             <i data-lucide="alert-triangle" class="w-8 h-8 text-red-500"></i>
         </div>
         <h3 class="text-xl font-bold text-[#5C6B65] mb-2">Hapus Data?</h3>
-        <p class="text-[#819A91] text-sm mb-6">Data siswa akan dihapus permanen. Lanjutkan?</p>
+        <p class="text-[#819A91] text-sm mb-6">Data mahasiswa akan dihapus permanen. Lanjutkan?</p>
         <div class="flex gap-3">
             <button onclick="closeDeleteModal()" class="flex-1 py-3 border border-[#D1D8BE] text-[#5C6B65] rounded-xl hover:bg-[#EEEFE0] transition-all font-medium">
                 Batal
@@ -430,7 +430,7 @@
         </div>
         <div>
             <h4 class="font-bold text-[#5C6B65]">Terhapus!</h4>
-            <p class="text-sm text-[#819A91]">Data siswa telah dihapus</p>
+            <p class="text-sm text-[#819A91]">Data mahasiswa telah dihapus</p>
         </div>
     </div>
 </div>

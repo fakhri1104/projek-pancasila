@@ -4,7 +4,7 @@
     <div class="p-6 md:p-8 max-w-7xl mx-auto">
         <div class="mb-8">
             <h1 class="text-3xl font-bold text-[#819A91]">Dashboard Aspirasi</h1>
-            <p class="text-gray-600 mt-2">Selamat datang di sistem aspirasi sekolah</p>
+            <p class="text-gray-600 mt-2">Selamat datang di sistem aspirasi Kampus</p>
         </div>
 
         <!-- Stats Cards -->
